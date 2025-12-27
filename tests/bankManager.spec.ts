@@ -36,10 +36,6 @@ test.describe("Bank Manager - Data Driven", () => {
       await expect(rowCustomer.locator("td").first()).toHaveText(
         customer.firstName
       );
-      //   await test.info().attach('screenshot saving customer',{
-      //     body:await page.screenshot(),
-      //     contentType: 'image/png'
-      //   })
       if (i == 2) {
         await managerDashboard.deleteCustomer(customer.firstName + "d");
       } else {

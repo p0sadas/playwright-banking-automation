@@ -26,4 +26,8 @@ A professional end-to-end testing suite for a Banking Application, built with **
 The framework is configured to provide full transparency:
 - **Screenshots:** Captured on failure for visual debugging.
 - **Videos:** Retained for failed runs to analyze test execution.
+<<<<<<< HEAD
 - **Trace Viewer:** Detailed step-by-step logs of every action and network request.
+=======
+- **Trace Viewer:** Detailed step-by-step logs of every action and network request.
+>>>>>>> 7ca06d7 (feat: implement POM and data-driven testing for Bank Manager flow)
