@@ -1,7 +1,7 @@
 import test, { expect } from "@playwright/test";
-import { LoginPage } from "./pages/loginPage";
-import { ManagerDashboard } from "./pages/ManagerDashboard";
-import customersData from "./data/customers.json";
+import { LoginPage } from "../pages/LoginPage";
+import { ManagerDashboard } from "../pages/ManagerDashboard"
+import customersData from "../data/customers.json";
 test.describe("Bank Manager - Data Driven", () => {
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
@@ -44,15 +44,4 @@ test.describe("Bank Manager - Data Driven", () => {
       }
     });
   }
-  
-  test("Check if endpoint of reading clients is ok", async ({ request }) => {
-    //since this page has no API I use this as an example but logic is the same
-    const res = await request.get(
-      "https://jsonplaceholder.typicode.com/users/3"
-    );
-    expect(res.ok()).toBeTruthy();
-    const body = await res.json();
-    expect(body.username).toEqual('Samantha');
-    
-  });
 });

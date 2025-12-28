@@ -1,33 +1,37 @@
 # 🏦 XYZ Bank - E2E Test Automation Framework
 
-A professional end-to-end testing suite for a Banking Application, built with **Playwright** and **TypeScript**. This project demonstrates advanced automation techniques used in enterprise environments.
+Framework profesional de automatización de pruebas End-to-End (E2E) desarrollado con **Playwright** y **TypeScript**. Este proyecto demuestra patrones avanzados de automatización, incluyendo Page Object Model (POM), Pruebas Basadas en Datos (DDT) e Integración Continua.
 
-## 🚀 Key Features
-- **Page Object Model (POM):** Improved maintainability by separating page logic from test scripts.
-- **Data-Driven Testing (DDT):** Dynamically executes test cases using data from external **JSON** files.
-- **Full CRUD Lifecycle:** Automates Creating, Searching, and Deleting customers with robust assertions.
-- **Advanced Locators:** Utilizes ARIA roles and scoped filtering to interact with dynamic Angular tables.
-- **Automated Reporting:** Configured to capture screenshots, videos, and traces automatically upon failure.
+## 🚀 Características Principales
+
+* **Patrón de Diseño:** Page Object Model (POM) para mejorar la mantenibilidad y escalabilidad del código.
+* **Data-Driven Testing (DDT):** Casos de prueba dirigidos por archivos **JSON**, permitiendo la validación de múltiples escenarios de usuario sin duplicar código.
+* **Localizadores Avanzados:** Uso de roles ARIA y selectores de alta precisión para una identificación robusta de elementos dinámicos.
+* **Integración Continua (CI/CD):** Totalmente integrado con **GitHub Actions** para ejecución automática en cada subida de código (push).
+* **Reportes Detallados:** Generación automática de reportes HTML que incluyen:
+    * 🎥 Grabaciones de video de los fallos.
+    * 📸 Capturas de pantalla en cada paso.
+    * 🔍 Trazas completas (Playwright Trace Viewer) para depuración profunda.
+
+---
 
 ## 🛠️ Tech Stack
-- **Framework:** Playwright
-- **Language:** TypeScript
-- **Design Pattern:** Page Object Model
-- **Data Format:** JSON
 
-## 📦 Getting Started
-1. **Clone the repo:** `git clone https://github.com/YOUR_USER/repo-name.git`
-2. **Install dependencies:** `npm install`
-3. **Run all tests:** `npx playwright test`
-4. **Run in UI Mode:** `npx playwright test --ui`
-5. **View Report:** `npx playwright show-report`
+* **Lenguaje:** TypeScript
+* **Framework:** Playwright
+* **CI/CD:** GitHub Actions / Jenkins
+* **Reportes:** Playwright HTML Reporter
 
-## 📊 Evidence & Reporting
-The framework is configured to provide full transparency:
-- **Screenshots:** Captured on failure for visual debugging.
-- **Videos:** Retained for failed runs to analyze test execution.
-<<<<<<< HEAD
-- **Trace Viewer:** Detailed step-by-step logs of every action and network request.
-=======
-- **Trace Viewer:** Detailed step-by-step logs of every action and network request.
->>>>>>> 7ca06d7 (feat: implement POM and data-driven testing for Bank Manager flow)
+---
+
+## 📦 Estructura del Proyecto
+
+```text
+├── .github/workflows/    # Configuración del Pipeline de CI/CD
+├── data/                 # Archivos JSON para pruebas basadas en datos
+├── pages/                # Page Object Model (Localizadores y Acciones)
+├── tests/                
+│   ├── ui/               # Pruebas de Interfaz de Usuario (Web)
+│   └── api/              # Pruebas de Backend (API)
+├── playwright.config.ts  # Configuración global de Playwright
+└── package.json          # Dependencias y scripts del proyecto
