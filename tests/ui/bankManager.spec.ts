@@ -1,7 +1,8 @@
 import test, { expect } from "@playwright/test";
-import { LoginPage } from "../pages/LoginPage";
-import { ManagerDashboard } from "../pages/ManagerDashboard"
-import customersData from "../data/customers.json";
+import { LoginPage } from "../../pages/LoginPage";
+import { ManagerDashboard } from "../../pages/ManagerDashboard";
+import customersData from "../../data/customers.json";
+
 test.describe("Bank Manager - Data Driven", () => {
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
