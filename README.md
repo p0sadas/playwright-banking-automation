@@ -1,37 +1,37 @@
 # 🏦 XYZ Bank - E2E Test Automation Framework
 
-Framework profesional de automatización de pruebas End-to-End (E2E) desarrollado con **Playwright** y **TypeScript**. Este proyecto demuestra patrones avanzados de automatización, incluyendo Page Object Model (POM), Pruebas Basadas en Datos (DDT) e Integración Continua.
+A professional End-to-End (E2E) test automation framework built with **Playwright** and **TypeScript**. This project showcases industry-standard automation patterns, including Page Object Model (POM), Data-Driven Testing (DDT), and Continuous Integration.
 
-## 🚀 Características Principales
+## 🚀 Key Features
 
-* **Patrón de Diseño:** Page Object Model (POM) para mejorar la mantenibilidad y escalabilidad del código.
-* **Data-Driven Testing (DDT):** Casos de prueba dirigidos por archivos **JSON**, permitiendo la validación de múltiples escenarios de usuario sin duplicar código.
-* **Localizadores Avanzados:** Uso de roles ARIA y selectores de alta precisión para una identificación robusta de elementos dinámicos.
-* **Integración Continua (CI/CD):** Totalmente integrado con **GitHub Actions** para ejecución automática en cada subida de código (push).
-* **Reportes Detallados:** Generación automática de reportes HTML que incluyen:
-    * 🎥 Grabaciones de video de los fallos.
-    * 📸 Capturas de pantalla en cada paso.
-    * 🔍 Trazas completas (Playwright Trace Viewer) para depuración profunda.
+* **Design Pattern:** Implemented **Page Object Model (POM)** to separate page structure from test logic, ensuring high maintainability.
+* **Data-Driven Testing (DDT):** Test scenarios are powered by external **JSON** files, enabling validation of multiple user profiles without code duplication.
+* **Robust Locators:** Utilization of ARIA roles and scoped locators to handle dynamic Angular elements effectively.
+* **CI/CD Integration:** Fully automated pipeline using **GitHub Actions** that triggers test execution on every push/pull request.
+* **Comprehensive Reporting:** Detailed HTML reports generated automatically, featuring:
+    * 🎥 Video recordings of test execution.
+    * 📸 Automated screenshots on failure.
+    * 🔍 Playwright Trace Viewer logs for deep debugging.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Lenguaje:** TypeScript
+* **Language:** TypeScript
 * **Framework:** Playwright
 * **CI/CD:** GitHub Actions / Jenkins
-* **Reportes:** Playwright HTML Reporter
+* **Reporting:** Playwright HTML Reporter
 
 ---
 
-## 📦 Estructura del Proyecto
+## 📦 Project Structure
 
 ```text
-├── .github/workflows/    # Configuración del Pipeline de CI/CD
-├── data/                 # Archivos JSON para pruebas basadas en datos
-├── pages/                # Page Object Model (Localizadores y Acciones)
+├── .github/workflows/    # CI/CD Pipeline configuration (GitHub Actions)
+├── data/                 # JSON data files for Data-Driven testing
+├── pages/                # Page Object Model classes (Locators & Actions)
 ├── tests/                
-│   ├── ui/               # Pruebas de Interfaz de Usuario (Web)
-│   └── api/              # Pruebas de Backend (API)
-├── playwright.config.ts  # Configuración global de Playwright
-└── package.json          # Dependencias y scripts del proyecto
+│   ├── ui/               # Web UI E2E tests
+│   └── api/              # Backend API validation tests
+├── playwright.config.ts  # Global Playwright configuration
+└── package.json          # Dependencies and automation scripts
